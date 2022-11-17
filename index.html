@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Let's SHOPPING</title>
+    <link rel="stylesheet" href="css/html5reset-1.6.1.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souvenirs of the world</title>
+    <link rel="stylesheet" href="css/html5reset-1.6.1.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+     -->
+</head>
+
+<body>
+    <div class="top_image">
+        <img src="img/top_aus_resize.jpg" alt="グレートバリアリーフ画像" width="1500px" height="400px">
+        <p class="main_title">オーストラリアのお土産特集</p>
+        <p class="sub_title">訪れたくなる可愛いアイテムが満載</p>
+    </div>
+    <header>
+
+
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">食品</a></li>
+                <li class="nav-item"><a href="">雑貨</a></li>
+                <li class="nav-item"><a href="">お酒</a></li>
+                <li class="nav-item"><a href="">化粧品</a></li>
+                <li class="nav-item"><a href="">衣類</a></li>
+            </ul>
+        </nav>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <form method="get" action="https://www.google.com" class="search_container">
+            <input type="text" size="25" placeholder="キーワード検索">
+            <input type="submit" value="&#xf002">
+        </form>
+
+        <div class="cart">
+            <div class="cart_cnt hidden">
+                <span id="js_cart_cnt"></span>
+            </div>
+            <a class="cart_icon" href="confirm.html">
+                <img src="img/cart_icon.png" alt="カートイメージ">
+            </a>
+        </div>
+
+    </header>
+
+
+
+    <div id=" wrapper">
+        <div class="item_wrapper">
+            <ul class="item_list">
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/food/t2.webp" alt="T2イメージ">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title">
+                            <h2>T2</h2>
+                        </div>
+                        <br>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">8,000</span>
+                        </div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="ティー" data-price="8000">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/food/cookies.jpg" alt="バイロンベイクッキー">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title">
+                            <h2>バイロンベイクッキー</h2>
+                        </div>
+                        <br>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">500</span>
+                        </div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="バイロンベイクッキー"
+                                data-price="500">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/food/jerky.jpg" alt="ジャーキーイメージ">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title">
+                            <h2>ジャーキー（カンガルー・クロコダイル・エミュー）</h2>
+                        </div>
+                        <br>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">2,000</span>
+                        </div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="ジャーキー" data-price="2000">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/food/manuka.jpg" alt="マヌカハニー">
+                    </div>
+                    <br>
+                    <div class="item_textbox">
+                        <div class="item_title">
+                            <h2>マヌカハニー</h2>
+                        </div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">3,000</span>
+                        </div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="マヌカハニー" data-price="3000">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/food/timtam.webp" alt="ティムタム">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title">
+                            <h2>ティムタム</h2>
+                        </div>
+                        <br>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">300</span>
+                        </div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="ティムタム" data-price="300">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/food/vegemite.jpg" alt="ベジマイト">
+                    </div>
+                    <br>
+                    <div class="item_textbox">
+                        <div class="item_title">
+                            <h2>ベジマイト</h2>
+                        </div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">400</span>
+                        </div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="ベジマイト" data-price="400">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
