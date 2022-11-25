@@ -1,19 +1,27 @@
 window.onload = function () {
-    var cart_btns = document.querySelectorAll('.js_cart_btn'),//カートボタン
+    let cart_btns = document.querySelectorAll('.js_cart_btn'),//カートボタン
         cart_cnt_icon = document.getElementById('js_cart_cnt'),//カートの個数アイコン
+        span1 = document.getElementById("span1");//個数変更
         cart_cnt = 0,//カートのアイテム数
         clicked = [],//クリックされたカートアイコンのインデックス
         save_items = [],//ローカルストレージ保存用の配列
         items = JSON.parse(localStorage.getItem("items"));//ローカルストレージの商品データ配列
 
+    
+
     // すでにカートに商品が入っている場合、カートアイコンのカウント表示とカートボタンをアクティブにする
     if (items) {
-        var id;
-        for (var i = 0; i < items.length; i++) {
+        let id;
+        for (let i = 0; i < items.length; i++) {
             id = items[i].id;
             save_items.push(items[i]);
             clicked.push(id);
             activate_btn(id);
+        }
+
+        if (items.length != 0) {
+            cart_cnt_icon.parentNode.classList.remove('hidden');
+            cart_cnt_icon.innerHTML = cart_cnt;
         }
 
         if (items.length != 0) {
@@ -26,10 +34,11 @@ window.onload = function () {
     cart_btns.forEach(function (cart_btn, index) {
         cart_btn.addEventListener('click', function () {
 
+
             // カートボタンがすでに押されているかの判定
             if (clicked.indexOf(index) >= 0) {
 
-                for (var i = 0; i < clicked.length; i++) {
+                for (let i = 0; i < clicked.length; i++) {
                     if (clicked[i] == index) {
                         clicked.splice(i, 1);
                         save_items.splice(i, 1);
@@ -40,14 +49,16 @@ window.onload = function () {
 
             } else if (clicked.indexOf(index) == -1) {
 
-                var name = cart_btn.dataset.name,//商品の名前を取得
-                    price = Number(cart_btn.dataset.price);//商品の値段を取得
 
+                let name = cart_btn.dataset.name,//商品の名前を取得
+                    price = Number(cart_btn.dataset.price);//商品の値段を取得
+                //  image = FileSelected(cart_btn.dataset.image);//商品の画像を取得
                 clicked.push(index);
                 save_items.push({
                     id: index,
                     name: name,
-                    price: price
+                    price: price,
+                    // image: image
                 });
 
                 activate_btn(index);
@@ -59,6 +70,8 @@ window.onload = function () {
 
         });
     });
+
+
 
     function activate_btn(index) {
         cart_cnt++;

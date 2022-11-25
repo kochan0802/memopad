@@ -5,6 +5,7 @@ window.onload = function () {　
         fragment = document.createDocumentFragment(),//DOMの追加処理用のフラグメント
         total = 0,//商品の合計金額
         total_ele = document.getElementById('js_total'),//商品の合計金額表示用の要素
+        
         confirm_btn = document.getElementById('js_confirm');//購入確定ボタン
 
     if (items) {
@@ -12,6 +13,7 @@ window.onload = function () {　
         for (var i = 0; i < items.length; i++) {
             var li = document.createElement('li'),
                 h2 = document.createElement('h2'),
+                // img = document.createElement('.item_img'),
                 price = document.createElement('div');
 
             price.classList.add('price');
